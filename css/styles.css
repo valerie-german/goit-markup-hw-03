@@ -1,0 +1,240 @@
+/* Кастомные css-свойства (переменные)*/
+:root {
+  /* Основной цвет текста */
+  --primary-text-color: #757575;
+  /* Цвет заголовков (кроме h1) */
+  --title-text-color: #212121;
+  /* Акцентный синий */
+  --accent-color: #2196f3;
+  /* Белый основной*/
+  --primary-white-color: #ffffff;
+  /* Серый дополнительный */
+  --secondary-bg-grey: #f5f4fa;
+  /* Цвет фона футера и героя */
+  --footer-bg-color: #2f303a;
+}
+
+/* Reset */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+/* Единственный глобальный стиль элемента */
+body {
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+}
+/* Убирает маркеры в списках */
+.list {
+  list-style: none;
+}
+
+/* --------------------1. Header----------------------- */
+/* 1.1. logo */
+.logo-header,
+.logo-footer {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+.logo-header .word-studio {
+  color: #000000;
+}
+/* 1.2. Навигация */
+.list.site-nav {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.site-nav .link {
+  color: var(--title-text-color);
+  text-decoration: none;
+}
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+/* 1.3. Контакты */
+.contacts .link {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--accent-color);
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 0 15px;
+  outline: 2px solid tomato;
+}
+/* -----------------------2. Main------------------- */
+/* 2.1. Цвет заголовков */
+.section-title,
+.title {
+  color: var(--title-text-color);
+}
+
+/*2.2. Герой */
+.hero {
+  background-color: var(--footer-bg-color);
+  text-align: center;
+}
+/* 2.2.1. Заголовок героя */
+.hero-title {
+  color: var(--primary-white-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  /* text-align: center; */
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* 2.3. Стилизация кнопки, общие свойства*/
+.button {
+  font-family: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+}
+/* 2.3.1. Кнопка Заказать Услугу (синяя) */
+.primary.button {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  padding: 10px 32px;
+}
+.primary.button:hover,
+.primary.button:focus {
+  background-color: #188ce8;
+  color: var(--primary-white-color);
+}
+/* 2.3.2. Кнопки фильтра в Портфолио (серые) */
+.secondary.button {
+  background-color: var(--secondary-bg-grey);
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  padding: 6px 22px;
+}
+.secondary.button:hover,
+.secondary.button:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+/* 2.4. Секция Преимущества */
+.features .title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.features .lead {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+}
+/* 2.5. Заголовки и подзаголовки секций Вид деятельности и Наша команда */
+.services .section-title,
+.team .section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+}
+
+/* Без font-size меняет кегль на 18.72px, откуда берётся это значение? */
+.team .title {
+  font-weight: 500;
+  font-size: inherit;
+  line-height: calc(19 / 16);
+}
+.team .subtitle {
+  line-height: calc(19 / 16);
+}
+/* Фон секции Наша команда */
+.section.team {
+  background-color: var(--secondary-bg-grey);
+}
+
+/* 2.6. Портфолио */
+.cases .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+}
+.cases .subtitle {
+  line-height: calc(30 / 16);
+}
+
+/* --------------------------3. Footer---------------------- */
+.footer {
+  background-color: var(--footer-bg-color);
+}
+.logo-footer .word-studio {
+  color: var(--primary-white-color);
+}
+/* Обнуление стилей address */
+.address {
+  /* all: initial; */
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 14px;
+  line-height: 1.71;
+}
+/* Локация */
+.location .link {
+  color: var(--primary-white-color);
+  text-decoration: none;
+}
+/* Контакты */
+.contact .link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+/* Стили при наведении */
+.location .link:hover,
+.location .link:focus {
+  color: var(--accent-color);
+}
+.contact .link:hover,
+.contact .link:focus {
+  color: var(--accent-color);
+}
