@@ -18,20 +18,20 @@
     <!-- Хедер -->
     <header>
       <!-- Главная навигация -->
-      <div class="container">
-      <nav>
+      <div class="container header">
+      <nav class="nav">
         <a href="./index.html" lang="en" class="logo-header">Web<span class="word-studio">Studio</span></a>
         <!-- Ссылки на страницы сайта -->
         <ul class="list site-nav">
-          <li><a href="" class="link current">Студия</a></li>
-          <li><a href="./portfolio.html" class="link">Портфолио</a></li>
-          <li><a href="" class="link">Контакты</a></li>
+          <li class="item"><a href="" class="link current">Студия</a></li>
+          <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
+          <li class="item"><a href="" class="link">Контакты</a></li>
         </ul>
       </nav>
       <!-- Контакты -->
       <ul class="list contacts">
-        <li><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
-        <li><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
+        <li class="item"><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
+        <li class="item"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
       </ul>
       </div>
     </header>
@@ -44,8 +44,9 @@
       </section>
       <!-- Преимущества -->
       <section class="section">
+        <div class="container">
         <!-- Cкрытый заголовок секции -->
-        <h2 hidden>Наши преимущества</h2>
+        <span class="visually-hidden"><h2>Наши преимущества</h2></span>
         <ul class="list features">
           <li>
             <h3 class="title">Внимание к деталям</h3>
@@ -72,9 +73,11 @@
             </p>
           </li>
         </ul>
+        </div>
       </section>
       <!-- Вид деятельности -->
       <section class="section services">
+        <div class="container">
         <h2 class="section-title">Чем мы занимаемся</h2>
         <ul class="list">
           <li>
@@ -92,36 +95,40 @@
             />
           </li>
         </ul>
+        </div>
       </section>
       <!-- Команда -->
       <section class="section team">
+        <div class="container">
         <h2 class="section-title">Наша команда</h2>
         <ul class="list">
-          <li>
-            <img src="./images/img-4.jpg" alt="Игорь Демьяненко" width="270" height="260" />
+          <li class="team-card">
+            <img class="team-photo" src="./images/img-4.jpg" alt="Игорь Демьяненко" width="270" height="260" />
             <h3 class="title">Игорь Демьяненко</h3>
             <p lang="en" class="subtitle">Product Designer</p>
           </li>
-          <li>
-            <img src="./images/img-1.jpg" alt="Ольга Репина" width="270" height="260" />
+          <li class="team-card">
+            <img class="team-photo" src="./images/img-1.jpg" alt="Ольга Репина" width="270" height="260" />
             <h3 class="title">Ольга Репина</h3>
             <p lang="en" class="subtitle">Frontend Developer</p>
           </li>
-          <li>
-            <img src="./images/img-2.jpg" alt="Николай Тарасов" width="270" height="260" />
+          <li class="team-card">
+            <img class="team-photo" src="./images/img-2.jpg" alt="Николай Тарасов" width="270" height="260" />
             <h3 class="title">Николай Тарасов</h3>
             <p lang="en" class="subtitle">Marketing</p>
           </li>
-          <li>
-            <img src="./images/img-3.jpg" alt="Михаил Ермаков" width="270" height="260" />
+          <li class="team-card">
+            <img class="team-photo" src="./images/img-3.jpg" alt="Михаил Ермаков" width="270" height="260" />
             <h3 class="title">Михаил Ермаков</h3>
             <p lang="en" class="subtitle">UI Designer</p>
           </li>
         </ul>
+        </div>
       </section>
     </main>
     <!-- Футер -->
     <footer class="footer">
+      <div class="container">
       <a href="./index.html" lang="en" class="logo-footer">Web<span class="word-studio">Studio</a>
       <!-- Контакты -->
       <address class="address">
@@ -141,6 +148,7 @@
           <li class="contact"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
         </ul>
       </address>
+      </div>
     </footer>
   </body>
 </html>

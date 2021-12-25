@@ -62,12 +62,17 @@ body {
 .logo-header .word-studio {
   color: #000000;
 }
+
 /* 1.2. Навигация */
 .list.site-nav {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
 }
 .site-nav .link {
   color: var(--title-text-color);
@@ -91,12 +96,29 @@ body {
 .contacts .link:focus {
   color: var(--accent-color);
 }
+.header .contacts {
+  display: flex;
+  margin-left: auto;
+}
+.contacts .item:not(:last-child) {
+  margin-right: 50px;
+}
 
+/* Оформление контейнера */
 .container {
   margin: 0 auto;
   width: 1200px;
   padding: 0 15px;
   outline: 2px solid tomato;
+}
+
+.nav {
+  display: flex;
+}
+.container.header {
+  display: flex;
+  padding: 24px 15px 25px;
+  border-bottom: 1px solid #ececec;
 }
 /* -----------------------2. Main------------------- */
 /* 2.1. Цвет заголовков */
@@ -116,9 +138,10 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  /* text-align: center; */
+
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 /* 2.3. Стилизация кнопки, общие свойства*/
@@ -128,6 +151,7 @@ body {
   cursor: pointer;
   text-align: center;
   border-radius: 4px;
+  border: 0px solid transparent;
 }
 /* 2.3.1. Кнопка Заказать Услугу (синяя) */
 .primary.button {
@@ -138,6 +162,7 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
   padding: 10px 32px;
+  min-width: 200px;
 }
 .primary.button:hover,
 .primary.button:focus {
@@ -159,7 +184,20 @@ body {
   color: var(--primary-white-color);
 }
 
+.section {
+  padding: 94px 0;
+}
+.section.services {
+  padding-top: 0;
+}
+
 /* 2.4. Секция Преимущества */
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
 .features .title {
   font-weight: 700;
   font-size: 14px;
@@ -170,6 +208,13 @@ body {
   font-size: 14px;
   line-height: calc(24 / 14);
 }
+.list.features {
+  width: 270px;
+}
+
+/* .list.features:not(:last-child) {
+} */
+
 /* 2.5. Заголовки и подзаголовки секций Вид деятельности и Наша команда */
 .services .section-title,
 .team .section-title {
@@ -177,8 +222,12 @@ body {
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
+  margin-bottom: 50px;
 }
 
+.title {
+  margin-bottom: 10px;
+}
 /* Без font-size меняет кегль на 18.72px, откуда берётся это значение? */
 .team .title {
   font-weight: 500;
@@ -193,6 +242,29 @@ body {
   background-color: var(--secondary-bg-grey);
 }
 
+.team-card {
+  display: inline-block;
+  text-align: center;
+  min-height: 368px;
+  padding-bottom: 30px;
+  background-color: var(--primary-white-color);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* .team .list > li {
+  display: inline-block;
+  text-align: center;
+  min-height: 368px;
+  padding-bottom: 30px;
+  background-color: var(--primary-white-color);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+} */
+
+.team-photo {
+  margin-bottom: 30px;
+}
 /* 2.6. Портфолио */
 .cases .title {
   font-weight: 700;
@@ -204,13 +276,23 @@ body {
   line-height: calc(30 / 16);
 }
 
+.list.filter {
+  margin-bottom: 50px;
+}
+
 /* --------------------------3. Footer---------------------- */
 .footer {
   background-color: var(--footer-bg-color);
+  padding: 60px 0;
 }
 .logo-footer .word-studio {
   color: var(--primary-white-color);
 }
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
 /* Обнуление стилей address */
 .address {
   /* all: initial; */
