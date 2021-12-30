@@ -306,10 +306,11 @@ body {
 
 .team-desc {
   padding-bottom: 30px;
+  margin-top: 30px;
 }
-.team-photo {
+/* .team-photo {
   margin-bottom: 30px;
-}
+} */
 /* 2.6. Портфолио */
 .cases .title {
   font-weight: 700;
