@@ -337,7 +337,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.list.cases > .link {
+.list.cases .link {
   display: block;
 }
 .list.cases > .item {
